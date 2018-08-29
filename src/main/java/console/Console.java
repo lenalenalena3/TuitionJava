@@ -19,11 +19,10 @@ public class Console {
     public static void dataToday() {
         /*Вывести на экран текущее название дня недели, название месяца и свое имя.
         Каждое слово должно быть в отдельной строке.*/
-        java.util.Calendar calendar = java.util.Calendar.getInstance(java.util.TimeZone.getDefault(), java.util.Locale.getDefault());
-        calendar.setTime(new java.util.Date());
-        String monthToday = Month.of(calendar.get(java.util.Calendar.MONTH)+1).getDisplayName(TextStyle.FULL_STANDALONE, Locale.forLanguageTag("ru"));
-        String dayToday= calendar.getDisplayName(Calendar.DAY_OF_WEEK,Calendar.LONG, new java.util.Locale("RU"));
-        System.out.println("День недели: " + dayToday.toUpperCase() + ";" +" Месяц: " +monthToday.toUpperCase()  + "; Имя: Робот");
+        Calendar cdar = Calendar.getInstance();
+        String cdarMonth = Month.of(cdar.get(Calendar.MONTH) + 1).getDisplayName(TextStyle.FULL_STANDALONE, Locale.forLanguageTag("ru"));
+        String cdarDayOfWeek = cdar.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale.forLanguageTag("ru"));
+        System.out.println("День недели: " + cdarDayOfWeek.toUpperCase() + ";" + " Месяц: " + cdarMonth.toUpperCase() + "; Имя: Робот");
     }
 
     public static void nullLine() {
@@ -50,10 +49,11 @@ public class Console {
 
     public static void w() {
         /*Вывести на экран букву "W" из символов  "*" (звездочка)*/
-
+        System.out.println("*    *    *\n *  * *  * \n  *     *  ");
     }
 
     public static void rez() {
         /*Вывести на экран результат вычисления 1+2-4*/
+        System.out.println(1 + 2 - 4);
     }
 }

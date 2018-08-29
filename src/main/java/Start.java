@@ -10,5 +10,9 @@ public class Start {
         Console.nullLine();
         System.out.println("\nЗадание 4");
         Console.rectangle();
+        System.out.println("\nЗадание 5");
+        Console.w();
+        System.out.println("\nЗадание 6");
+        Console.rez();
     }
 }
