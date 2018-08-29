@@ -1,12 +1,8 @@
 package console;
 
-import java.security.InvalidParameterException;
-import java.time.DayOfWeek;
-import java.time.LocalDate;
 import java.time.Month;
 import java.time.format.TextStyle;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.Locale;
 
 public class Console {
@@ -38,7 +34,6 @@ public class Console {
     public static void rectangle() {
         /*Вывести на экран прямоугольник, заполненный буквами А.
         Количество строк в прямоугольнике равно 5, количество столбцов равно 8.*/
-
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 8; j++) {
                 System.out.print("A");
@@ -49,7 +44,7 @@ public class Console {
 
     public static void w() {
         /*Вывести на экран букву "W" из символов  "*" (звездочка)*/
-        System.out.println("*    *    *\n *  * *  * \n  *     *  ");
+        System.out.println("*     *     *\n *   * *   * \n  * *   * *  \n   *     *   ");
     }
 
     public static void rez() {

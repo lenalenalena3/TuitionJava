@@ -1,3 +1,4 @@
+import arithmetic.Arithmetic;
 import console.Console;
 
 public class Start {
@@ -14,5 +15,9 @@ public class Start {
         Console.w();
         System.out.println("\nЗадание 6");
         Console.rez();
+        System.out.println("\nЗадание 7");
+        Arithmetic.arithmetic7();
+        System.out.println("\nЗадание 8");
+        Arithmetic.arithmetic8();
     }
 }
