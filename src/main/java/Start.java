@@ -1,5 +1,6 @@
 import arithmetic.Arithmetic;
 import console.Console;
+import cycle.Cycle;
 
 public class Start {
     public static void main(String[] args) {
@@ -34,6 +35,9 @@ public class Start {
         Arithmetic.arithmetic14();
         System.out.println("\nЗадание 15");
       //  Arithmetic.arithmetic15();
+        System.out.println("\nЗадание 75");
+        Cycle.cycle75();
+        Cycle.cycle76();
 
     }
 }
