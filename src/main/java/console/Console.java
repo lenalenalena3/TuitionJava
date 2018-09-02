@@ -6,7 +6,6 @@ import java.util.Calendar;
 import java.util.Locale;
 
 public class Console {
-
     public static void consoleText() {
         /*Вывести на экран текст "Silence is golden" */
         System.out.println("Silence is golden");
@@ -48,17 +47,15 @@ public class Console {
 
         for (int i = 1; i <= 4; i++) {
             for (int j = 1; j <= 13; j++) {
-                if (((i==1)&&((j==1)||(j==7)||(j ==13)))
-                ||
-                ((i==2)&&((j==2)||(j==6)||(j==8)||(j==12)))
-                ||
-                ((i==3)&&((j==3)||(j==5)||(j==9)||(j==11)))
+                if (((i == 1) && ((j == 1) || (j == 7) || (j == 13)))
                         ||
-                ((i==4)&&((j==4)||(j ==10))))
-                {
+                        ((i == 2) && ((j == 2) || (j == 6) || (j == 8) || (j == 12)))
+                        ||
+                        ((i == 3) && ((j == 3) || (j == 5) || (j == 9) || (j == 11)))
+                        ||
+                        ((i == 4) && ((j == 4) || (j == 10)))) {
                     System.out.print("*");
-                }
-                else System.out.print(" ");
+                } else System.out.print(" ");
             }
             System.out.println();
         }
@@ -69,5 +66,37 @@ public class Console {
     public static void rez() {
         /*Вывести на экран результат вычисления 1+2-4*/
         System.out.println(1 + 2 - 4);
+    }
+
+    public static void all() {
+        System.out.println("\nЗадание 1");
+        Console.consoleText();
+        System.out.println("\nЗадание 2");
+        Console.dataToday();
+        System.out.println("\nЗадание 3");
+        Console.nullLine();
+        System.out.println("\nЗадание 4");
+        Console.rectangle();
+        System.out.println("\nЗадание 5");
+        Console.w();
+        System.out.println("\nЗадание 6");
+        Console.rez();
+    }
+
+    public static void decomposePrimeNumbers(int x) {
+        //  System.out.println(x+" = ");
+    //    System.out.println("Этап 1 " + x);
+        for (int i = 2; i <= x; i++) {
+      //      System.out.println("Этап 2 цикл начало " + x + "; " + i + "; " + x + "%" + i + "=" + x % i);
+            if (x % i == 0) {
+       //         System.out.println("Этап 3 делится без остатка");
+         //       System.out.println("Этап 4 находим остаток " + x + " / " + i);
+                System.out.print(i+" ");
+                x = x / i;
+       //         System.out.println("Этап 5 остаток " + x);
+                decomposePrimeNumbers(x);
+                break;
+            }
+        }
     }
 }
