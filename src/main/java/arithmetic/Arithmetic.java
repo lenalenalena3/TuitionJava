@@ -114,21 +114,55 @@ public class Arithmetic {
         System.out.println("Периметр квадрата: " + square * 4 + " Площадь квадрата: " + square * square);
     }
 
-    public static void arithmetic20(int min, int km) {
+    public static void arithmetic19(double priceSweets, int priceBiscuit) {
+        //Пользователь вводит цены 1 кг конфет и 1 кг печенья. Найдите стоимость:
+        //а) одной покупки из 300 г конфет и 400 г печенья;
+        //б) трех покупок, каждая из 2 кг печенья и 1 кг 800 г конфет
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Введите цены");
+    }
+
+    public static void arithmetic20() {
         //Пользователь вводит время в минутах и расстояние в километрах. Найдите скорость в м/с.
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Введите время в минутах");
+        int min = sc.nextInt();
+        System.out.println("Введите расстояние в километрах");
+        int km = sc.nextInt();
+        System.out.println(km * 1000 / (min * 60) + " м/с");
     }
 
     public static void arithmetic21() {
         //Даны катеты прямоугольника. Найдите площадь, периметр и гипотенузу треугольника.
+        int x = 4;
+        int y = 3;
+        double z = Math.pow(x * x + y * y, 0.5);
+        System.out.println("Площадь прямоугольника с катетами " + x + " и " + y + " равна " + x * y / 2);
+        System.out.println("Периметр прямоугольника с катетами " + x + " и " + y + " равен " + (int) (x + y + z));
+        System.out.println("Гипотенуза прямоугольного треугольника с катетами " + x + " и " + y + " равна " + (int) z);
     }
 
     public static void arithmetic22() {
         //Дано значение температуры в градусах Цельсия. Вывести температуру в градусах Фаренгейта.
+        double temperatureC = 36.6;
+        double temperatureF = 1.8 * temperatureC + 32;
+        System.out.println("Температура в градусах Цельсия " + temperatureC + " = " + String.format("%.2f", temperatureF) + " в градусах Фаренгейта");
+    }
+
+    public static void arithmetic23(){
+        //Известно, что X кг конфет стоит а рублей. Определить, сколько стоит y кг этих конфет, а также
+        //сколько кг конфет можно купить на k рублей. Все значения вводит пользователь.
+    }
+
+    public static void arithmetic24(){
+        //Пользователь вводит количество дней, указывает процент скидки и вводит сумму. Рассчитать прибыль,
+        // если за каждый день сумма увеличивается на 3 $ и затем применяется скидка, то есть итоговая сумма
+        // еще увеличивается на данное число процентов.
     }
 
     public static void arithmetic25(int week, int month, int day) {
         //Пользователь вводит количество недель, месяцев, лет и получает количество дней за это время.
-        // Считать, что в месяце 30 дней.
+        //Считать, что в месяце 30 дней.
     }
 
     public static void arithmetic26() {
@@ -143,6 +177,17 @@ public class Arithmetic {
         System.out.println("Поменяли местами: " + a + " " + b);
     }
 
+    public static void arithmetic27() {
+        //Даны три переменные a, b, c. Изменить значения этих переменных так, чтобы в "a" хранилось значение a+b,
+        // а в "b" хранилась разность старых значений c-a, а в "c" хранилось сумма старых значений a+b+c.
+        // Например, a=0, b=2, c=5, тогда новые значения a=2, b=3 и c=7.
+    }
+
+    public static void arithmetic28() {
+        //Пользователь вводит сумму вклада в банк и годовой процент. Найдите сумму вклада через 5 лет
+        // (рассмотреть два способа начисления процентов)
+    }
+
     public static void arithmetic29() {
         //Поменяйте местами значения двух переменных, не используя дополнительных переменных
         int a = 17;
@@ -150,18 +195,31 @@ public class Arithmetic {
         System.out.println("Даны числа: " + a + " " + b);
         a = a + b - (b = a);
         System.out.println("Поменяли местами: " + a + " " + b);
-
     }
 
-    public static void arithmetic30() {
+    public static void arithmetic30(int a) {
         //Дано число а. Не пользуясь никакими арифметическими операциями кроме умножения, получите:
         //а^4 за две операции;
-        //a^6 за три оперции;
+        //a^6 за три операции;
         //а^15 за пять операций;
+        int a2=a*a;     //1
+        int a4=a2*a2;   //2
+        int a6=a4*a2;   //3
+        int a2_15=a*a;
+        int a3_15=a2_15*a;
+        int a6_15=a3_15*a3_15;
+        int a12_15=a6_15*a6_15;
+        int a15_15=a12_15*a3_15;
+        System.out.println("а^4 за две операции "+a4+", при а= "+a);
+        System.out.println("a^6 за три операции "+a6+", при а= "+a);
+        System.out.println("а^15 за пять операций "+a15_15+", при а= "+a);
     }
 
     public static void arithmetic31() {
-        //Дан прямоугольник размером 647*170. Сколько квадратов со стороной 30 можно вырезеть из него?
+        //Дан прямоугольник размером 647*170. Сколько квадратов со стороной 30 можно вырезать из него?
+        int n170 = 170 / 30;
+        int n647 = (647 - n170*30) / 30;
+        System.out.println("Количество квадратов: "+(n647 + n170));
     }
 
     public static void arithmetic32(int y) {
@@ -201,12 +259,33 @@ public class Arithmetic {
         //    Arithmetic.arithmetic17();
         System.out.println("\nЗадание 18");
         //    Arithmetic.arithmetic18();
+        System.out.println("\nЗадание 19");
+        // Arithmetic.arithmetic19();
+        System.out.println("\nЗадание 20");
+        // Arithmetic.arithmetic20();
+        System.out.println("\nЗадание 21");
+        Arithmetic.arithmetic21();
+        System.out.println("\nЗадание 22");
+        Arithmetic.arithmetic22();
+        System.out.println("\nЗадание 23");
+        Arithmetic.arithmetic23();
+        System.out.println("\nЗадание 24");
+        Arithmetic.arithmetic24();
+        System.out.println("\nЗадание 25");
+     //   Arithmetic.arithmetic25();
         System.out.println("\nЗадание 26");
         Arithmetic.arithmetic26();
+        System.out.println("\nЗадание 27");
+        Arithmetic.arithmetic27();
+        System.out.println("\nЗадание 28");
+        Arithmetic.arithmetic28();
         System.out.println("\nЗадание 29");
         Arithmetic.arithmetic29();
+        System.out.println("\nЗадание 30");
+        Arithmetic.arithmetic30(2);
+        System.out.println("\nЗадание 31");
+        Arithmetic.arithmetic31();
         System.out.println("\nЗадание 32");
         Arithmetic.arithmetic32(237);
-
     }
 }

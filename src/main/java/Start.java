@@ -1,6 +1,8 @@
 import arithmetic.Arithmetic;
+import condition.Condition;
 import console.Console;
 import cycle.Cycle;
+import recursion.Recursion;
 
 public class Start {
     public static void main(String[] args) {
@@ -13,14 +15,7 @@ public class Start {
         //    Cycle.cycle76();
         System.out.println("\nЗадание 77");
         //    Cycle.cycle77();
-        System.out.println();
-        System.out.println("18 раскладывается на простые числа:");
-        Console.decomposePrimeNumbers(18);
-        System.out.println();
-        System.out.println("16 раскладывается на простые числа:" );
-        Console.decomposePrimeNumbers(16);
-        System.out.println();
-        System.out.println("30 раскладывается на простые числа:" );
-        Console.decomposePrimeNumbers(30);
+        Condition.all();
+       // Recursion.all();
     }
 }

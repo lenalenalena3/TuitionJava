@@ -40,4 +40,11 @@ public class Cycle {
     public static void cycle78() {
         //Вывести на экран фигуру из звездочек:
     }
+
+    public static void all(){
+        System.out.println("\nЗадание 75");
+        System.out.println("\nЗадание 76");
+        System.out.println("\nЗадание 77");
+        System.out.println("\nЗадание 78");
+    }
 }

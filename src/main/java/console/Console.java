@@ -59,8 +59,6 @@ public class Console {
             }
             System.out.println();
         }
-
-
     }
 
     public static void rez() {
@@ -83,20 +81,4 @@ public class Console {
         Console.rez();
     }
 
-    public static void decomposePrimeNumbers(int x) {
-        //  System.out.println(x+" = ");
-    //    System.out.println("Этап 1 " + x);
-        for (int i = 2; i <= x; i++) {
-      //      System.out.println("Этап 2 цикл начало " + x + "; " + i + "; " + x + "%" + i + "=" + x % i);
-            if (x % i == 0) {
-       //         System.out.println("Этап 3 делится без остатка");
-         //       System.out.println("Этап 4 находим остаток " + x + " / " + i);
-                System.out.print(i+" ");
-                x = x / i;
-       //         System.out.println("Этап 5 остаток " + x);
-                decomposePrimeNumbers(x);
-                break;
-            }
-        }
-    }
 }
